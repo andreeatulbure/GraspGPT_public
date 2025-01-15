@@ -228,7 +228,9 @@ def regularize_pc_point_count(pc, npoints, use_farthest_point=False):
 def farthest_grasps(grasps, num_clusters=32, num_grasps=64):
     """ Returns grasps sampled with farthest point sampling """
     grasps_fps = cluster_grasps(grasps, num_clusters=num_clusters)
+    print('grasps_fps:', grasps_fps.shape)
     clusters_fps = sample_grasp_indexes(num_grasps, grasps_fps)
+    print('num_clusters:', num_clusters)
     grasps = np.array([grasps_fps[cluster[0]][cluster[1]]
                        for cluster in clusters_fps])
     return grasps
