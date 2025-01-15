@@ -1,2 +1,4 @@
 data/
 checkpoints/
+*pyc
+gcngrasp/data_specification.py
