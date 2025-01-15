@@ -27,7 +27,7 @@ def gpt(text):
     OpenAI GPT API
     """
     response = openai.Completion.create(
-    engine="text-davinci-003",
+    engine="gpt-3.5-turbo-instruct", #"gpt-4o", #"text-davinci-003",
     prompt=text,
     temperature=1.0,
     max_tokens=256,
