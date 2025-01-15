@@ -1,4 +1,6 @@
 data/
 checkpoints/
 __pycache__/
+*__pycache__*
+*.pyc
 gcngrasp/data_specification.py
